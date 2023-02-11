@@ -1,0 +1,14 @@
+#include <iostream>
+#include <list>
+#include <iterator> 
+using namespace std;
+int main() {
+	list<int>mylist = {};
+	list<int>::iterator iter = mylist.begin();
+	for(int i = 0; i < 10; i++)mylist.insert(iter, rand() % 10 + 1);
+	mylist.sort();
+	for (int j = 0; j < 10; j++) {
+		iter++;
+		cout << *(iter);
+	}
+}
